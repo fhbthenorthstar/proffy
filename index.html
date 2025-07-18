@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proffy - Brandbook Compliant Design</title>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🅿️</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- REPLACE this Roboto link with the DM Sans link -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Proffy Brandbook Colors (Primary & Secondary)
+                        'proffy-blue': '#0B58B0', // Pantone 2935 C approx.
+                        'proffy-orange': '#FE5000', // Pantone Orange 021 C approx.
+
+                        // Proffy Brandbook Grays
+                        'proffy-gray-dark': '#333333', // Pantone 425 C (K80) approx.
+                        'proffy-gray-medium': '#A6A6A6', // Pantone Black C 30% (K35) approx.
+                        'proffy-gray-light': '#D1D5DB', // Equivalent to Tailwind gray-300 for borders/dividers
+
+                        // Specific colors for light page background and blue-on-blue text
+                        'proffy-bg-light': '#F9FAFB', // Very light grey page background
+                        'proffy-blue-light': '#ADD7F7', // Lighter shade of blue for text on blue background
+                        'proffy-bg-secondary-light': '#E8F0F8',
+
+                        // Dark Theme Colors (for the second team section)
+                        darkTheme: {
+                            DEFAULT: '#222222', // Main background and card background
+                            text: '#E0E0E0',    // Light gray for general text
+                            subtitle: '#9CA3AF', // A medium gray for titles like "Co-Founder"
+                            primaryBlue: '#2563EB', // Blue for social bar/links
+                        },
+                    },
+                    fontFamily: {
+                        // UPDATE this line to use DM Sans
+                        'sans': ['DM Sans', 'sans-serif'] // Set DM Sans as default sans-serif
+                    },
+                    footer: {
+                        bg: '#1A1A1A',     // Very dark gray for the main footer background
+                        text: '#B0B0B0',   // Light gray for the text content
+                        line: '#3D3D3D',   // A slightly lighter gray for the divider line
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-text-color {
+            transition: color 0.3s ease-in-out;
+        }
+
+
+
+        .img-dinidh {
+            background-image: url('https://techcloudltd.com/wp-content/uploads/2024/06/Posing-and-facial-expressions-for-professional-male-headshots-1-1024x727.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-leszek {
+            background-image: url('https://techcloudltd.com/wp-content/uploads/2024/06/Posing-and-facial-expressions-for-professional-male-headshots-1-1024x727.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-jarrod {
+            background-image: url('https://techcloudltd.com/wp-content/uploads/2024/06/Posing-and-facial-expressions-for-professional-male-headshots-1-1024x727.webp');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <!-- Font Awesome for Icons (for the dark team section) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-proffy-bg-light font-sans">
+
+    <!-- ============================================ -->
+    <!-- HEADER / NAVIGATION                          -->
+    <!-- ============================================ -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
+        <div class="container mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#home">
+                <!-- Desktop Logo (SVG) - Hidden on mobile, displayed on medium screens and up -->
+                <svg id="header-logo-desktop" class="h-10 w-auto nav-text-color text-white hidden md:block"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 114 51" width="114">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M36.953 13.047q0-2.665-2.686-2.458c-4.762.373-7.409 2.545-8.358 7.217-.31 1.522-.264 3.108-.322 4.682V34.14h6.87s-.009-12.779-.006-13.09c.02-2.732.841-3.668 3.58-3.924.706-.065.944-.31.915-1.013 0-1.02.01-2.043.01-3.066z"
+                        clip-rule="evenodd"></path>
+                    <path fill="currentColor"
+                        d="M22.719 18.787a12 12 0 0 0-2.53-3.72 12 12 0 0 0-3.748-2.512c-1.434-.622-2.983-.933-4.635-.933-1.653 0-3.155.31-4.593.933a12 12 0 0 0-3.748 2.512 11.9 11.9 0 0 0-2.53 3.72Q0 20.93 0 23.394v17.82h5.342v-8a11.5 11.5 0 0 0 3.045 1.418q1.637.49 3.422.49 2.483-.002 4.635-.93a12.1 12.1 0 0 0 3.748-2.512 12 12 0 0 0 2.53-3.724 11.3 11.3 0 0 0 .935-4.558c0-1.613-.313-3.18-.935-4.608zm-4.968 7.097a6.5 6.5 0 0 1-1.382 2.05 6.6 6.6 0 0 1-2.037 1.372 6.2 6.2 0 0 1-2.53.515 6.2 6.2 0 0 1-2.51-.515 6.5 6.5 0 0 1-2.06-1.373 6.5 6.5 0 0 1-1.381-2.049 6.1 6.1 0 0 1-.515-2.49c0-.87.17-1.732.515-2.512a6.6 6.6 0 0 1 1.382-2.02 6.5 6.5 0 0 1 2.06-1.373 6.3 6.3 0 0 1 2.51-.512c.876 0 1.747.172 2.529.512Q15.5 18 16.369 18.86a6.6 6.6 0 0 1 1.382 2.02c.342.781.515 1.613.515 2.513s-.173 1.7-.515 2.49">
+                    </path>
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="m107.08 13.837-.013 10.891v.007c-.013 2.124-1.92 3.84-4.27 3.84s-4.162-1.639-4.26-3.691c-.003-.01-.01-.023-.01-.023V13.833l-12.496.007s0-3.244.006-4.28c.003-1.652.9-2.597 2.546-2.918.57-.11 1.154-.152 1.864-.24v-3.68q0-2.982-3.028-2.684c-4.208.414-7.314 2.969-7.976 6.844-.326 1.917-.257 3.876-.264 5.86 0 .081.007.32.007.373a.72.72 0 0 1-.724.718h-5.053c-.4 0-.726-.32-.726-.718q0-.035.006-.068s-.013-1.79-.006-2.58c.016-2.733.873-3.66 3.615-3.915.707-.065.968-.314.942-1.014-.046-1.02-.017-2.043-.017-3.066q0-2.664-2.685-2.457c-4.763.369-7.41 2.542-8.358 7.217-.368 1.82-.32 5.776-.32 5.863a.72.72 0 0 1-.586.706.7.7 0 0 1-.205.03c-.313.006-1.092 0-1.092 0H57.04v.006l-.003-.004-2.676 4.922c.466.67.811 1.44.997 2.282.756 3.468-1.46 6.884-4.948 7.635-3.488.748-6.93-1.448-7.683-4.915-.756-3.464 1.46-6.883 4.948-7.635.411-.09.818-.132 1.226-.142l2.695-4.957a11.8 11.8 0 0 0-5.055-.02C40.144 12.38 36.082 18.646 37.468 25c1.385 6.352 7.692 10.39 14.09 9.014 6.395-1.376 10.457-7.644 9.071-13.997l-.048-.18h5.283v14.135h6.829V20.57c0-.405.329-.735.74-.735l5.756.007v14.126h6.858V19.836h5.61s-.04 5.682.042 6.233c.084 2.402 1.245 4.746 3.158 6.41 2.344 2.037 5.515 2.645 7.96 2.102 1.626-.363 2.845-.897 4.296-2.008.274 4.07-1.275 7.586-4.909 9.807-4.254 2.6-8.582 2.124-12.634-.861-.919.987-2.395 2.593-3.412 3.7l-1.21 1.309c.61.553 1.265 1.055 1.946 1.515a14.2 14.2 0 0 0 2.849 1.55 17.4 17.4 0 0 0 10.463 1.027c5.137-1.088 9.227-4.326 11.503-8.531 1.427-2.52 2.265-5.456 2.275-8.674.016-6.055.016-19.578.016-19.578z"
+                        clip-rule="evenodd"></path>
+                </svg>
+
+                <!-- Mobile Logo (PNG) - Displayed on mobile, hidden on medium screens and up -->
+                <img id="header-logo-mobile" src="./proffy-mobile-logo.png" alt="Your Company Mobile Logo"
+                    class="h-10 w-auto block md:hidden">
+            </a>
+            <div class="flex items-center gap-6">
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#about"
+                        class="nav-link nav-text-color text-white hover:text-proffy-orange font-medium">ABOUT</a>
+                    <a href="#about" class="nav-link nav-text-color text-white hover:text-proffy-orange font-medium">FOR
+                        INVESTOR</a>
+                    <a href="#team" class="nav-link nav-text-color text-white hover:text-proffy-orange font-medium">OUR
+                        TEAM</a>
+                    <a href="#contact"
+                        class="nav-link nav-text-color text-white hover:text-proffy-orange font-medium">CONTACT</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button id="menu-toggle-button"
+                        class="w-12 h-12 rounded-full flex items-center justify-center bg-proffy-gray-dark/50 hover:bg-proffy-gray-dark transition-colors">
+                        <svg id="hamburger-icon" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- DESKTOP OVERLAY PANEL (FINAL - LIGHT GLASS)  -->
+    <!-- ============================================ -->
+    <div id="desktop-overlay-menu"
+        class="fixed inset-0 bg-black/60 z-50 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+        <div class="flex justify-end h-full">
+            <!-- Glassy Panel with Animation -->
+            <div id="overlay-panel-content"
+                class="w-full max-w-md bg-white/80 backdrop-blur-xl border-l border-black/10 p-8 flex flex-col h-full transform translate-x-full transition-transform duration-300 ease-in-out">
+
+                <!-- Top Section: Logo & Close Button -->
+                <div class="flex-shrink-0 flex items-center justify-between mb-12">
+                    <a href="#home">
+                        <svg class="h-10 w-auto text-proffy-blue" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 114 51" width="114">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M36.953 13.047q0-2.665-2.686-2.458c-4.762.373-7.409 2.545-8.358 7.217-.31 1.522-.264 3.108-.322 4.682V34.14h6.87s-.009-12.779-.006-13.09c.02-2.732.841-3.668 3.58-3.924.706-.065.944-.31.915-1.013 0-1.02.01-2.043.01-3.066z"
+                                clip-rule="evenodd"></path>
+                            <path fill="currentColor"
+                                d="M22.719 18.787a12 12 0 0 0-2.53-3.72 12 12 0 0 0-3.748-2.512c-1.434-.622-2.983-.933-4.635-.933-1.653 0-3.155.31-4.593.933a12 12 0 0 0-3.748 2.512 11.9 11.9 0 0 0-2.53 3.72Q0 20.93 0 23.394v17.82h5.342v-8a11.5 11.5 0 0 0 3.045 1.418q1.637.49 3.422.49 2.483-.002 4.635-.93a12.1 12.1 0 0 0 3.748-2.512 12 12 0 0 0 2.53-3.724 11.3 11.3 0 0 0 .935-4.558c0-1.613-.313-3.18-.935-4.608zm-4.968 7.097a6.5 6.5 0 0 1-1.382 2.05 6.6 6.6 0 0 1-2.037 1.372 6.2 6.2 0 0 1-2.53.515 6.2 6.2 0 0 1-2.51-.515 6.5 6.5 0 0 1-2.06-1.373 6.5 6.5 0 0 1-1.381-2.049 6.1 6.1 0 0 1-.515-2.49c0-.87.17-1.732.515-2.512a6.6 6.6 0 0 1 1.382-2.02 6.5 6.5 0 0 1 2.06-1.373 6.3 6.3 0 0 1 2.51-.512c.876 0 1.747.172 2.529.512Q15.5 18 16.369 18.86a6.6 6.6 0 0 1 1.382 2.02c.342.781.515 1.613.515 2.513s-.173 1.7-.515 2.49">
+                            </path>
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="m107.08 13.837-.013 10.891v.007c-.013 2.124-1.92 3.84-4.27 3.84s-4.162-1.639-4.26-3.691c-.003-.01-.01-.023-.01-.023V13.833l-12.496.007s0-3.244.006-4.28c.003-1.652.9-2.597 2.546-2.918.57-.11 1.154-.152 1.864-.24v-3.68q0-2.982-3.028-2.684c-4.208.414-7.314 2.969-7.976 6.844-.326 1.917-.257 3.876-.264 5.86 0 .081.007.32.007.373a.72.72 0 0 1-.724.718h-5.053c-.4 0-.726-.32-.726-.718q0-.035.006-.068s-.013-1.79-.006-2.58c.016-2.733.873-3.66 3.615-3.915.707-.065.968-.314.942-1.014-.046-1.02-.017-2.043-.017-3.066q0-2.664-2.685-2.457c-4.763.369-7.41 2.542-8.358 7.217-.368 1.82-.32 5.776-.32 5.863a.72.72 0 0 1-.586.706.7.7 0 0 1-.205.03c-.313.006-1.092 0-1.092 0H57.04v.006l-.003-.004-2.676 4.922c.466.67.811 1.44.997 2.282.756 3.468-1.46 6.884-4.948 7.635-3.488.748-6.93-1.448-7.683-4.915-.756-3.464 1.46-6.883 4.948-7.635.411-.09.818-.132 1.226-.142l2.695-4.957a11.8 11.8 0 0 0-5.055-.02C40.144 12.38 36.082 18.646 37.468 25c1.385 6.352 7.692 10.39 14.09 9.014 6.395-1.376 10.457-7.644 9.071-13.997l-.048-.18h5.283v14.135h6.829V20.57c0-.405.329-.735.74-.735l5.756.007v14.126h6.858V19.836h5.61s-.04 5.682.042 6.233c.084 2.402 1.245 4.746 3.158 6.41 2.344 2.037 5.515 2.645 7.96 2.102 1.626-.363 2.845-.897 4.296-2.008.274 4.07-1.275 7.586-4.909 9.807-4.254 2.6-8.582 2.124-12.634-.861-.919.987-2.395 2.593-3.412 3.7l-1.21 1.309c.61.553 1.265 1.055 1.946 1.515a14.2 14.2 0 0 0 2.849 1.55 17.4 17.4 0 0 0 10.463 1.027c5.137-1.088 9.227-4.326 11.503-8.531 1.427-2.52 2.265-5.456 2.275-8.674.016-6.055.016-19.578.016-19.578z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <button id="close-overlay-button"
+                        class="text-proffy-gray-medium hover:text-proffy-orange transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Middle Section: Main Content -->
+                <div class="flex-grow flex flex-col items-center justify-center text-center -mt-8">
+                    <h2 class="text-3xl font-bold text-proffy-gray-dark mb-8 leading-tight">Never let a staffing
+                        shortage cost you revenue again. Proffy delivers the on-demand talent you need to fulfill every
+                        order, expand operations, and drive growth without the friction and overhead of traditional
+                        hiring</h2>
+                    <a href="#contact"
+                        class="w-full max-w-xs bg-proffy-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transform hover:-translate-y-1 transition-all duration-300">
+                        CONTACT US
+                    </a>
+                </div>
+
+                <!-- Bottom Section: Contact Info -->
+                <div class="flex-shrink-0 text-center text-sm">
+                    <p class="text-proffy-gray-medium uppercase tracking-wider">Contact Us</p>
+                    <p class="text-proffy-gray-dark mt-2">HQ: Tallinn, Estonia</p>
+                    <a href="mailto:info@proffyhub.ee"
+                        class="text-proffy-blue hover:underline transition-colors">info@proffyhub.ee</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE DROPDOWN MENU -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-24 left-0 right-0 z-30">
+        <div class="bg-white shadow-lg mx-4 rounded-lg">
+            <a href="#about" class="block py-3 px-4 text-proffy-gray-dark hover:bg-gray-50 font-medium">ABOUT</a>
+            <a href="#team" class="block py-3 px-4 text-proffy-gray-dark hover:bg-gray-50 font-medium">OUR TEAM</a>
+            <a href="#contact" class="block py-3 px-4 text-proffy-gray-dark hover:bg-gray-50 font-medium">CONTACT</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- ============================================ -->
+        <!-- HERO SECTION (FINAL)                         -->
+        <!-- ============================================ -->
+        <section id="home" class="relative h-screen bg-cover bg-center flex items-center justify-center text-center"
+            style="background-image: url('bg-1.png');">
+            <!-- Dark overlay for readability -->
+            <div class="absolute inset-0 bg-black/70"></div>
+
+            <!-- Centered Content Wrapper -->
+            <div class="relative z-10 flex flex-col items-center px-6">
+
+                <!-- 1. Big Logo (Adjusted for mobile) -->
+                <div class="mb-8">
+                    <svg class="h-28 md:h-40 w-auto text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 114 51" width="114">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M36.953 13.047q0-2.665-2.686-2.458c-4.762.373-7.409 2.545-8.358 7.217-.31 1.522-.264 3.108-.322 4.682V34.14h6.87s-.009-12.779-.006-13.09c.02-2.732.841-3.668 3.58-3.924.706-.065.944-.31.915-1.013 0-1.02.01-2.043.01-3.066z"
+                            clip-rule="evenodd"></path>
+                        <path fill="currentColor"
+                            d="M22.719 18.787a12 12 0 0 0-2.53-3.72 12 12 0 0 0-3.748-2.512c-1.434-.622-2.983-.933-4.635-.933-1.653 0-3.155.31-4.593.933a12 12 0 0 0-3.748 2.512 11.9 11.9 0 0 0-2.53 3.72Q0 20.93 0 23.394v17.82h5.342v-8a11.5 11.5 0 0 0 3.045 1.418q1.637.49 3.422.49 2.483-.002 4.635-.93a12.1 12.1 0 0 0 3.748-2.512 12 12 0 0 0 2.53-3.724 11.3 11.3 0 0 0 .935-4.558c0-1.613-.313-3.18-.935-4.608zm-4.968 7.097a6.5 6.5 0 0 1-1.382 2.05 6.6 6.6 0 0 1-2.037 1.372 6.2 6.2 0 0 1-2.53.515 6.2 6.2 0 0 1-2.51-.515 6.5 6.5 0 0 1-2.06-1.373 6.5 6.5 0 0 1-1.381-2.049 6.1 6.1 0 0 1-.515-2.49c0-.87.17-1.732.515-2.512a6.6 6.6 0 0 1 1.382-2.02 6.5 6.5 0 0 1 2.06-1.373 6.3 6.3 0 0 1 2.51-.512c.876 0 1.747.172 2.529.512Q15.5 18 16.369 18.86a6.6 6.6 0 0 1 1.382 2.02c.342.781.515 1.613.515 2.513s-.173 1.7-.515 2.49">
+                        </path>
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="m107.08 13.837-.013 10.891v.007c-.013 2.124-1.92 3.84-4.27 3.84s-4.162-1.639-4.26-3.691c-.003-.01-.01-.023-.01-.023V13.833l-12.496.007s0-3.244.006-4.28c.003-1.652.9-2.597 2.546-2.918.57-.11 1.154-.152 1.864-.24v-3.68q0-2.982-3.028-2.684c-4.208.414-7.314 2.969-7.976 6.844-.326 1.917-.257 3.876-.264 5.86 0 .081.007.32.007.373a.72.72 0 0 1-.724.718h-5.053c-.4 0-.726-.32-.726-.718q0-.035.006-.068s-.013-1.79-.006-2.58c.016-2.733.873-3.66 3.615-3.915.707-.065.968-.314.942-1.014-.046-1.02-.017-2.043-.017-3.066q0-2.664-2.685-2.457c-4.763.369-7.41 2.542-8.358 7.217-.368 1.82-.32 5.776-.32 5.863a.72.72 0 0 1-.586.706.7.7 0 0 1-.205.03c-.313.006-1.092 0-1.092 0H57.04v.006l-.003-.004-2.676 4.922c.466.67.811 1.44.997 2.282.756 3.468-1.46 6.884-4.948 7.635-3.488.748-6.93-1.448-7.683-4.915-.756-3.464 1.46-6.883 4.948-7.635.411-.09.818-.132 1.226-.142l2.695-4.957a11.8 11.8 0 0 0-5.055-.02C40.144 12.38 36.082 18.646 37.468 25c1.385 6.352 7.692 10.39 14.09 9.014 6.395-1.376 10.457-7.644 9.071-13.997l-.048-.18h5.283v14.135h6.829V20.57c0-.405.329-.735.74-.735l5.756.007v14.126h6.858V19.836h5.61s-.04 5.682.042 6.233c.084 2.402 1.245 4.746 3.158 6.41 2.344 2.037 5.515 2.645 7.96 2.102 1.626-.363 2.845-.897 4.296-2.008.274 4.07-1.275 7.586-4.909 9.807-4.254 2.6-8.582 2.124-12.634-.861-.919.987-2.395 2.593-3.412 3.7l-1.21 1.309c.61.553 1.265 1.055 1.946 1.515a14.2 14.2 0 0 0 2.849 1.55 17.4 17.4 0 0 0 10.463 1.027c5.137-1.088 9.227-4.326 11.503-8.531 1.427-2.52 2.265-5.456 2.275-8.674.016-6.055.016-19.578.016-19.578z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+
+                <!-- 2. SEO-friendly Header -->
+                <h1 class="text-4xl md:text-4xl font-bold text-white mb-4">
+                    SCALE YOUR TEAM AT THE SPEED OF DEMAND
+                </h1>
+
+                <!-- 3. Description -->
+                <p class="text-lg text-gray-200 leading-relaxed max-w-2xl mx-auto mb-12">
+                    Staffing bottlenecks kill growth. Proffy eliminates them. Our platform instantly matches businesses
+                    with the flexible talent they need to scale operations, meet demand, and seize every opportunity
+                    without delay.
+                </p>
+
+                <!-- 4. Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                    <a href="#contact"
+                        class="w-full sm:w-auto bg-proffy-orange text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                        CONTACT US
+                    </a>
+                    <a href="mailto:vladimir@sors.ee"
+                        class="w-full sm:w-auto bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-proffy-blue transition-all duration-300">
+                        FOR INVESTORS
+                    </a>
+                </div>
+
+                <!-- 5. Social Icons -->
+                <div class="flex justify-center items-center gap-8">
+                    <!-- LinkedIn Icon -->
+                    <a href="#" aria-label="Telegram"
+                        class="hover:text-gray-400 text-white transition-colors duration-300">
+                        <i class="fab fa-telegram text-4xl"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn"
+                        class="hover:text-gray-400 text-white transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-4xl"></i>
+                    </a>
+
+                    <!-- Twitter Icon -->
+                    <a href="#" aria-label="Twitter"
+                        class="hover:text-gray-400 text-white transition-colors duration-300">
+                        <i class="fab fa-twitter text-4xl"></i>
+                    </a>
+
+                    <!-- YouTube Icon -->
+                    <a href="#" aria-label="YouTube"
+                        class="group t transition hover:text-gray-400 text-white duration-300">
+                        <i class="fab fa-youtube text-4xl"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <!-- Section Heading (if you want one for this dark section, it's not in the provided image) -->
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">MEET THE MINDS BEHIND PROFFY</h2>
+                    <p class="text-lg mx-auto">
+                        Our dedicated team is driven by a shared passion for transforming the world of flexible work.
+                        With diverse expertise in technology, marketplace solutions, and empowering individuals,
+                        we're committed to creating a platform where earning money, gaining experience, and
+                        working on your own terms is easier and more rewarding than ever.
+                    </p>
+                </div>
+
+
+                <!-- Team Members Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Team Member Card 1 (Vladimir Berezovski) -->
+                    <!-- Note: The provided image shows Dinidh's photo but Jarrod's text. I'm using Dinidh's name for consistency with the card title. -->
+                    <div class="relative bg-darkTheme rounded-lg overflow-hidden">
+                        <!-- Image container with grayscale filter -->
+                        <div class="w-full h-80 img-dinidh"></div>
+
+                        <!-- Text Content & Social Icons (new layout) -->
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <!-- Name and Title -->
+                                <div>
+                                    <h3 class="text-2xl font-bold text-darkTheme-text">Vladimir Berezovski</h3>
+                                    <p class="text-darkTheme-primaryBlue text-lg">Co-Founder</p>
+                                </div>
+                                <!-- Social Icons -->
+                                <div class="flex space-x-3">
+                                    <a href="#"
+                                        class="text-darkTheme-subtitle text-xl hover:text-darkTheme-primaryBlue transition-colors"
+                                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"
+                                        class="text-darkTheme-subtitle text-xl hover:text-darkTheme-primaryBlue transition-colors"
+                                        aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <!-- Removed GitHub icon as per request -->
+                                </div>
+                            </div>
+                            <!-- Bio Text -->
+                            <p class="text-darkTheme-subtitle leading-relaxed text-sm">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card 2 (Leszek Krol) -->
+                    <div class="relative bg-darkTheme rounded-lg overflow-hidden">
+                        <div class="w-full h-80 img-leszek"></div>
+
+                        <!-- Text Content & Social Icons (new layout) -->
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <!-- Name and Title -->
+                                <div>
+                                    <h3 class="text-2xl font-bold text-darkTheme-text">Vladimir Berezovski</h3>
+                                    <p class="text-darkTheme-primaryBlue text-lg">Co-Founder</p>
+                                </div>
+                                <!-- Social Icons -->
+                                <div class="flex space-x-3">
+                                    <a href="#"
+                                        class="text-darkTheme-subtitle text-xl hover:text-darkTheme-primaryBlue transition-colors"
+                                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"
+                                        class="text-darkTheme-subtitle text-xl hover:text-darkTheme-primaryBlue transition-colors"
+                                        aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                            <!-- Bio Text -->
+                            <p class="text-darkTheme-subtitle leading-relaxed text-sm">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card 3 (Jarrod Robertson) -->
+                    <div class="relative bg-darkTheme rounded-lg overflow-hidden">
+                        <div class="w-full h-80 img-jarrod"></div>
+
+                        <!-- Text Content & Social Icons (new layout) -->
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <!-- Name and Title -->
+                                <div>
+                                    <h3 class="text-2xl font-bold text-darkTheme-text">Vladimir Berezovski</h3>
+                                    <p class="text-darkTheme-primaryBlue text-lg">Co-Founder</p>
+                                </div>
+                                <!-- Social Icons -->
+                                <div class="flex space-x-3">
+                                    <a href="#"
+                                        class="text-darkTheme-subtitle text-xl hover:text-darkTheme-primaryBlue transition-colors"
+                                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"
+                                        class="text-darkTheme-subtitle text-xl hover:text-darkTheme-primaryBlue transition-colors"
+                                        aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                            <!-- Bio Text -->
+                            <p class="text-darkTheme-subtitle leading-relaxed text-sm">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="for-investor" class="py-20 px-4 bg-proffy-bg-secondary-light">
+            <div class="max-w-7xl mx-auto">
+
+
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">INVEST IN THE FUTURE OF WORK</h2>
+                    <p class="text-lg mx-auto">
+                        Proffy is not just a platform; it's a strategic investment in the rapidly expanding gig economy.
+                        We're building the infrastructure for the next generation of on-demand talent.
+                    </p>
+                </div>
+
+                <!-- Key Investment Pillars / Value Proposition -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
+
+                    <!-- Pillar 1: Massive Market Opportunity -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 text-center flex flex-col items-center
+                transition-all duration-300 ease-in-out hover:shadow-xl hover:translate-y-[-4px]">
+                        <div class="mb-6">
+                            <i class="fas fa-chart-line text-6xl text-proffy-blue mx-auto"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-proffy-gray-dark mb-3">Massive Opportunity</h3>
+                        <p class="leading-relaxed">
+                            Invest in a multi-billion dollar global gig economy, poised for exponential growth.
+                            Proffy directly taps into this expanding market, offering significant returns fueled
+                            by evolving work patterns and diverse business demands worldwide.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2: Scalable, Robust Technology -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 text-center flex flex-col items-center
+                transition-all duration-300 ease-in-out hover:shadow-xl hover:translate-y-[-4px]">
+                        <div class="mb-6">
+                            <i class="fas fa-cogs text-6xl text-proffy-blue mx-auto"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-proffy-gray-dark mb-3">Scalable Technology</h3>
+                        <p class="leading-relaxed">
+                            Our cutting-edge platform features advanced matching algorithms and efficient operational
+                            tools.
+                            This robust technology stack is engineered for rapid, seamless expansion across various
+                            industries and diverse geographic regions, ensuring sustained growth.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3: Solving Real-World Problems -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 text-center flex flex-col items-center
+                transition-all duration-300 ease-in-out hover:shadow-xl hover:translate-y-[-4px]">
+                        <div class="mb-6">
+                            <i class="fas fa-lightbulb text-6xl text-proffy-blue mx-auto"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-proffy-gray-dark mb-3">Solving Real Problems</h3>
+                        <p class="leading-relaxed">
+                            Proffy empowers businesses to efficiently overcome critical staffing shortages, while
+                            enabling individuals to access flexible, meaningful work. This dual impact drives
+                            significant efficiency and fosters economic growth for all involved stakeholders.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Call to Action for Investors -->
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-proffy-gray-dark mb-6">Ready to Accelerate Our Growth?</h3>
+                    <p class="text-lg mx-auto mb-8">
+                        We are actively seeking strategic partners and investors to fuel our expansion and capitalize on
+                        the vast opportunities ahead.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                        <a href="mailto:invest@proffy.com" class="inline-block px-10 py-4 bg-proffy-orange text-white text-xl font-bold rounded-full shadow-lg
+                                   hover:bg-proffy-blue hover:scale-105 transition-all duration-300 ease-in-out">
+                            Download Investor Deck
+                        </a>
+                        <a href="mailto:invest@proffy.com"
+                            class="inline-block px-10 py-4 bg-transparent border-2 border-proffy-blue text-proffy-blue text-xl font-bold rounded-full
+                                   hover:bg-proffy-blue hover:proffy-gray-dark hover:scale-105 transition-all duration-300 ease-in-out">
+                            Schedule a Meeting
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- CONTACTS SECTION (Let's Talk Style - IMPROVED) -->
+        <!-- ============================================ -->
+        <section id="contact" class="bg-[#0b58b0] py-20 px-4">
+            <div
+                class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between text-center">
+                <!-- Content Container -->
+                <div class="flex flex-col items-center mx-auto">
+                    <!-- Small text on top -->
+                    <p class="text-lg text-white mb-4">Investors, Partners & Beta Testers</p>
+
+                    <!-- Large "Let's Talk" text, linked to email -->
+                    <a href="mailto:info@proffyhub.ee"
+                        class="text-white text-7xl md:text-8xl lg:text-9xl font-bold leading-none mb-6 
+                                                   inline-block cursor-pointer hover:underline transition-colors duration-300">
+                        Let's Talk
+                    </a>
+
+                </div>
+
+                <!-- Stylish Arrow IMAGE - NOW CLICKABLE -->
+                <!-- IMPORTANT: Replace 'path/to/your-arrow-image.png' with the actual path to your image file. -->
+                <a href="mailto:info@proffyhub.ee" aria-label="Contact us via email"
+                    class="inline-block w-48 h-48 md:w-64 md:h-64 mt-8 md:mt-0 shrink-0">
+                    <img src="lets-talk.png" alt="Let's Talk Arrow" class="w-full h-full object-contain">
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- FOOTER SECTION                               -->
+        <!-- ============================================ -->
+        <footer class="bg-footer-bg text-footer-text font-sans">
+            <div class="max-w-7xl mx-auto px-4">
+                <!-- Top Row: Logo and Email -->
+                <div class="py-10 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                    <!-- Hyperhumans Logo Placeholder -->
+                    <!-- IMPORTANT: Replace this SVG with the actual Hyperhumans logo SVG or an <img> tag -->
+                    <svg id="header-logo" class="h-10 w-auto nav-text-color text-proffy-blue"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 114 51" width="114">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M36.953 13.047q0-2.665-2.686-2.458c-4.762.373-7.409 2.545-8.358 7.217-.31 1.522-.264 3.108-.322 4.682V34.14h6.87s-.009-12.779-.006-13.09c.02-2.732.841-3.668 3.58-3.924.706-.065.944-.31.915-1.013 0-1.02.01-2.043.01-3.066z"
+                            clip-rule="evenodd"></path>
+                        <path fill="currentColor"
+                            d="M22.719 18.787a12 12 0 0 0-2.53-3.72 12 12 0 0 0-3.748-2.512c-1.434-.622-2.983-.933-4.635-.933-1.653 0-3.155.31-4.593.933a12 12 0 0 0-3.748 2.512 11.9 11.9 0 0 0-2.53 3.72Q0 20.93 0 23.394v17.82h5.342v-8a11.5 11.5 0 0 0 3.045 1.418q1.637.49 3.422.49 2.483-.002 4.635-.93a12.1 12.1 0 0 0 3.748-2.512 12 12 0 0 0 2.53-3.724 11.3 11.3 0 0 0 .935-4.558c0-1.613-.313-3.18-.935-4.608zm-4.968 7.097a6.5 6.5 0 0 1-1.382 2.05 6.6 6.6 0 0 1-2.037 1.372 6.2 6.2 0 0 1-2.53.515 6.2 6.2 0 0 1-2.51-.515 6.5 6.5 0 0 1-2.06-1.373 6.5 6.5 0 0 1-1.381-2.049 6.1 6.1 0 0 1-.515-2.49c0-.87.17-1.732.515-2.512a6.6 6.6 0 0 1 1.382-2.02 6.5 6.5 0 0 1 2.06-1.373 6.3 6.3 0 0 1 2.51-.512c.876 0 1.747.172 2.529.512Q15.5 18 16.369 18.86a6.6 6.6 0 0 1 1.382 2.02c.342.781.515 1.613.515 2.513s-.173 1.7-.515 2.49">
+                        </path>
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="m107.08 13.837-.013 10.891v.007c-.013 2.124-1.92 3.84-4.27 3.84s-4.162-1.639-4.26-3.691c-.003-.01-.01-.023-.01-.023V13.833l-12.496.007s0-3.244.006-4.28c.003-1.652.9-2.597 2.546-2.918.57-.11 1.154-.152 1.864-.24v-3.68q0-2.982-3.028-2.684c-4.208.414-7.314 2.969-7.976 6.844-.326 1.917-.257 3.876-.264 5.86 0 .081.007.32.007.373a.72.72 0 0 1-.724.718h-5.053c-.4 0-.726-.32-.726-.718q0-.035.006-.068s-.013-1.79-.006-2.58c.016-2.733.873-3.66 3.615-3.915.707-.065.968-.314.942-1.014-.046-1.02-.017-2.043-.017-3.066q0-2.664-2.685-2.457c-4.763.369-7.41 2.542-8.358 7.217-.368 1.82-.32 5.776-.32 5.863a.72.72 0 0 1-.586.706.7.7 0 0 1-.205.03c-.313.006-1.092 0-1.092 0H57.04v.006l-.003-.004-2.676 4.922c.466.67.811 1.44.997 2.282.756 3.468-1.46 6.884-4.948 7.635-3.488.748-6.93-1.448-7.683-4.915-.756-3.464 1.46-6.883 4.948-7.635.411-.09.818-.132 1.226-.142l2.695-4.957a11.8 11.8 0 0 0-5.055-.02C40.144 12.38 36.082 18.646 37.468 25c1.385 6.352 7.692 10.39 14.09 9.014 6.395-1.376 10.457-7.644 9.071-13.997l-.048-.18h5.283v14.135h6.829V20.57c0-.405.329-.735.74-.735l5.756.007v14.126h6.858V19.836h5.61s-.04 5.682.042 6.233c.084 2.402 1.245 4.746 3.158 6.41 2.344 2.037 5.515 2.645 7.96 2.102 1.626-.363 2.845-.897 4.296-2.008.274 4.07-1.275 7.586-4.909 9.807-4.254 2.6-8.582 2.124-12.634-.861-.919.987-2.395 2.593-3.412 3.7l-1.21 1.309c.61.553 1.265 1.055 1.946 1.515a14.2 14.2 0 0 0 2.849 1.55 17.4 17.4 0 0 0 10.463 1.027c5.137-1.088 9.227-4.326 11.503-8.531 1.427-2.52 2.265-5.456 2.275-8.674.016-6.055.016-19.578.016-19.578z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+
+                    <a href="mailto:info@hyperhumans.ai"
+                        class="text-footer-text text-lg hover:proffy-gray-dark transition-colors">info@proffy.ee</a>
+                </div>
+
+                <!-- Divider Line -->
+                <div class="border-t border-footer-line"></div>
+
+                <!-- Bottom Row: Copyright and Legal Links -->
+                <div
+                    class="py-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-sm">
+                    <p class="mb-2 md:mb-0">Copyright © 2024 – PROFFYHUB OÜ – SHarju maakond, Tallinn, Lasnamäe
+                        linnaosa, Tähesaju tee 14, 13917</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="hover:proffy-gray-dark transition-colors">Terms of Service</a>
+                        <a href="#" class="hover:proffy-gray-dark transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('header');
+            const headerLogoDesktop = document.getElementById('header-logo-desktop');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const menuToggleButton = document.getElementById('menu-toggle-button');
+
+            const desktopOverlayMenu = document.getElementById('desktop-overlay-menu');
+            const overlayPanelContent = document.getElementById('overlay-panel-content');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeOverlayButton = document.getElementById('close-overlay-button');
+
+            const handleScroll = () => {
+                const isScrolled = window.scrollY > 50;
+
+                // --- CHANGES START HERE ---
+
+                // Toggle transparent background when not scrolled, and semi-transparent white when scrolled
+                header.classList.toggle('bg-transparent', !isScrolled); // Transparent when not scrolled
+                header.classList.toggle('bg-white/80', isScrolled);    // Semi-transparent white when scrolled (adjust opacity as desired)
+
+                // Keep backdrop-blur-sm for the glassy effect
+                header.classList.toggle('backdrop-blur-sm', isScrolled);
+
+                // Border
+                header.classList.toggle('border-b', isScrolled);
+                header.classList.toggle('border-proffy-gray-light', isScrolled);
+                // Optionally, remove border when not scrolled to avoid a subtle line if it's there
+                // header.classList.toggle('border-transparent', !isScrolled);
+
+
+                // --- CHANGES END HERE ---
+
+                if (headerLogoDesktop) {
+                    headerLogoDesktop.classList.toggle('text-white', !isScrolled);
+                    headerLogoDesktop.classList.toggle('text-proffy-blue', isScrolled);
+                }
+
+                navLinks.forEach(link => {
+                    link.classList.toggle('text-white', !isScrolled);
+                    link.classList.toggle('text-proffy-gray-dark', isScrolled);
+                });
+            };
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Call on load to set initial state
+
+            const openDesktopMenu = () => {
+                desktopOverlayMenu.classList.remove('opacity-0', 'pointer-events-none');
+                overlayPanelContent.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeDesktopMenu = () => {
+                desktopOverlayMenu.classList.add('opacity-0', 'pointer-events-none');
+                overlayPanelContent.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            };
+
+            menuToggleButton.addEventListener('click', () => {
+                if (window.innerWidth >= 768) {
+                    openDesktopMenu();
+                } else {
+                    mobileMenu.classList.toggle('hidden');
+                }
+            });
+
+            closeOverlayButton.addEventListener('click', closeDesktopMenu);
+            desktopOverlayMenu.addEventListener('click', (e) => {
+                if (e.target === desktopOverlayMenu) {
+                    closeDesktopMenu();
+                }
+            });
+
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
